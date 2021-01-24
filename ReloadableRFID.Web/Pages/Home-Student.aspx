@@ -1,4 +1,4 @@
-﻿e<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="ReloadableRFID.Web.Pages.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home-Student.aspx.cs" Inherits="ReloadableRFID.Web.Pages.WebForm9" %>
 
 <!DOCTYPE html>
 
@@ -73,62 +73,20 @@
                     <div class="sidebar-nav navbar-collapse">
                         <ul class="nav" id="side-menu">
                             <li>
-                                <a href="Home.aspx" class="active"><i class="fa fa-dashboard fa-fw"></i> Home</a>
+                                <a href="Home-Student.aspx" class="active"><i class="fa fa-dashboard fa-fw"></i> Home</a>
                             </li>
+                           
                             <li>
-                                <a href="#"> <i class="fa fa-users"></i> Account<span class="fa arrow"></span></a>
-                                <ul class="nav nav-second-level">
-                                     <li>
-                                        <a href="#">Student<span class="fa arrow"></span></a>
-                                        <ul class="nav nav-third-level">
-                                            <li>
-                                                <a href="CreateStudent.aspx">Create Student's Account</a>
-                                            </li>
-                                            
-                                        </ul>
-                                        <!-- /.nav-third-level -->
-                                    </li>
-                                      <li>
-
-                                        <a href="#">Cashier<span class="fa arrow"></span></a>
-                                           <!-- /Cashier Create Account -->
-                                        <ul class="nav nav-third-level">
-                                            <li>
-                                                <a href="#">Create Cashier Account</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Cashier Account</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                </ul>
+                                <a href="Student.aspx"><i class="fa fa-money fa-fw"></i>Balance of E-money<span class="fa arrow"></span></a>
+                                
                                 <!-- /.nav-second-level -->
                             </li>
                              <li>
-                                <a href="manage.aspx"><i class="fa fa-dropbox fa-fw"></i> Manage Products<span class="fa arrow"></span></a>
-                              
+                                <a href="transaction.aspx"><i class="fa fa-exchange fa-fw"></i>Transaction History<span class="fa arrow"></span></a>
+                                
                                 <!-- /.nav-second-level -->
                             </li>
-                            <li>
-                                <a href="#"><i class="fa fa-files-o fa-fw"></i> Reports<span class="fa arrow"></span></a>
-                                <ul class="nav nav-second-level">
-                                     <li>
-                                        <a href="blank.html">Daily</a>
-                                    </li>
-                                    <li>
-                                        <a href="blank.html">Weekly</a>
-                                    </li>
-                                     <li>
-                                        <a href="blank.html">Monthly</a>
-                                    </li>
-                                    <li>
-                                        <a href="login.html">Yearly</a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-second-level -->
-                            </li>
-                                 
+                            
                         </ul>
                     </div>
                 </div>
@@ -147,7 +105,7 @@
                                           
                         
                           <!-- Current avatar -->
-                            <img src="/images/Buildings.jpg" alt="Sample Photo"/>
+                            <img src="/images/book.jpg" alt="Sample Photo"/>
                        
                       
                      
