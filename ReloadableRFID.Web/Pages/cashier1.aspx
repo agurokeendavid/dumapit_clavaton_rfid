@@ -70,31 +70,96 @@
                             <li><a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="AdminLogin.aspx"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                            <li><a href="Login.aspx"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
                             </li>
                         </ul>
                     </li>
                 </ul>
                 <!-- /.navbar-top-links -->
-
-                <div class="navbar-default sidebar" role="navigation">
+<div class="navbar-default sidebar" role="navigation">
                     <div class="sidebar-nav navbar-collapse">
                         <ul class="nav" id="side-menu">
                             <li>
-                                <a href="Home.aspx" class="active"><i class="fa fa-dashboard fa-fw"></i>Home</a>
+                                <a href="Home.aspx" class="active"><i class="fa fa-dashboard fa-fw"></i> Home</a>
+                            </li>
+                            <% if (Session["AccountTypeId"].ToString() == "2") { %>
+                            <li>
+                                <a href="Student.aspx" class="active"><i class="fa fa-dashboard fa-fw"></i> Balance of e-Money</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-fax fa-fw"></i>POS<span class="fa arrow"></span></a>
-                                
+                                <a href="#" class="active"><i class="fa fa-dashboard fa-fw"></i> Transaction History</a>
+                            </li>
+                            <% } else if (Session["AccountTypeId"].ToString() == "3") { %>
+                            <li>
+                                <a href="cashier1.aspx" class="active"><i class="fa fa-dashboard fa-fw"></i> POS Centinnial</a>
+                            </li>
+                            <% } else if (Session["AccountTypeId"].ToString() == "4") { %>
+                            <li>
+                                <a href="cashier.aspx" class="active"><i class="fa fa-dashboard fa-fw"></i> POS UE</a>
+                            </li>
+                            <% } else { %>
+                            <li>
+                                <a href="#"> <i class="fa fa-users"></i> Account<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                     <li>
+                                        <a href="#">Student<span class="fa arrow"></span></a>
+                                        <ul class="nav nav-third-level">
+                                            <li>
+                                                <a href="CreateStudent.aspx">Create Student's Account</a>
+                                            </li>
+                                            
+                                        </ul>
+                                        <!-- /.nav-third-level -->
+                                    </li>
+                                      <li>
+
+                                        <a href="#">Cashier<span class="fa arrow"></span></a>
+                                           <!-- /Cashier Create Account -->
+                                        <ul class="nav nav-third-level">
+                                            <li>
+                                                <a href="CreateCashierCen.aspx">Create Cashier Centennial Account</a>
+                                            </li>
+                                            <li>
+                                                <a href="CreateCashierUE.aspx">Create Cashier UE Account</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Cashier Account</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
                                 <!-- /.nav-second-level -->
                             </li>
-                         
-                          
-                         
+                             <li>
+                                <a href="manage.aspx"><i class="fa fa-dropbox fa-fw"></i> Manage Products<span class="fa arrow"></span></a>
+                              
+                                <!-- /.nav-second-level -->
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-files-o fa-fw"></i> Reports<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                     <li>
+                                        <a href="blank.html">Daily</a>
+                                    </li>
+                                    <li>
+                                        <a href="blank.html">Weekly</a>
+                                    </li>
+                                     <li>
+                                        <a href="blank.html">Monthly</a>
+                                    </li>
+                                    <li>
+                                        <a href="login.html">Yearly</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+                             <% } %>    
                         </ul>
                     </div>
                 </div>
             </nav>
+
 
             <!--Start of Student Register Form-->
             <div id="page-wrapper">

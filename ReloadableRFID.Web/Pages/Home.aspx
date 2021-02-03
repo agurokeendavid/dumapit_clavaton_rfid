@@ -75,6 +75,22 @@
                             <li>
                                 <a href="Home.aspx" class="active"><i class="fa fa-dashboard fa-fw"></i> Home</a>
                             </li>
+                            <% if (Session["AccountTypeId"].ToString() == "2") { %>
+                            <li>
+                                <a href="Student.aspx" class="active"><i class="fa fa-dashboard fa-fw"></i> Balance of e-Money</a>
+                            </li>
+                            <li>
+                                <a href="#" class="active"><i class="fa fa-dashboard fa-fw"></i> Transaction History</a>
+                            </li>
+                            <% } else if (Session["AccountTypeId"].ToString() == "3") { %>
+                            <li>
+                                <a href="cashier1.aspx" class="active"><i class="fa fa-dashboard fa-fw"></i> POS Centinnial</a>
+                            </li>
+                            <% } else if (Session["AccountTypeId"].ToString() == "4") { %>
+                            <li>
+                                <a href="cashier.aspx" class="active"><i class="fa fa-dashboard fa-fw"></i> POS UE</a>
+                            </li>
+                            <% } else { %>
                             <li>
                                 <a href="#"> <i class="fa fa-users"></i> Account<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
@@ -94,7 +110,10 @@
                                            <!-- /Cashier Create Account -->
                                         <ul class="nav nav-third-level">
                                             <li>
-                                                <a href="#">Create Cashier Account</a>
+                                                <a href="CreateCashierCen.aspx">Create Cashier Centennial Account</a>
+                                            </li>
+                                            <li>
+                                                <a href="CreateCashierUE.aspx">Create Cashier UE Account</a>
                                             </li>
                                             <li>
                                                 <a href="#">Cashier Account</a>
@@ -128,7 +147,7 @@
                                 </ul>
                                 <!-- /.nav-second-level -->
                             </li>
-                                 
+                             <% } %>    
                         </ul>
                     </div>
                 </div>
@@ -148,12 +167,8 @@
                         
                           <!-- Current avatar -->
                             <img src="/images/Buildings.jpg" alt="Sample Photo"/>
-                       
-                      
-                     
-                                          
-
-                                          </div>
+              
+                       </div>
                  </div>
                  <!-- /.col-lg-4 -->
             </div>

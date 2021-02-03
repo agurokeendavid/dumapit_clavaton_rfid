@@ -115,100 +115,73 @@
                                     
                                 </div>
 
-                                <div class="panel-body">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                        <div class="table-responsive">
-                                        <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                              <section class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                    </div>
+                                    <div class="card-body">
+
+                                        <asp:GridView runat="server" ID="gvRecords" CssClass="table table-striped table-bordered table-hover" AutoGenerateColumns="False" OnRowCommand="gvRecords_RowCommand">
+                                            <Columns>
+                                                <asp:BoundField DataField="Id" HeaderText="ID" Visible="False" />
+                                                <asp:BoundField DataField="CashierNo" HeaderText="Cashier Number" />
+                                                <asp:BoundField DataField="FullName" HeaderText="Name" />
+                                                <asp:BoundField DataField="Dob" HeaderText="BirthDate" />
+                                                <asp:BoundField DataField="ContactNo" HeaderText="Contact No" />
+                                                <asp:BoundField DataField="Address" HeaderText="Address" />
+                                              
+                                                
+                                            </Columns>
+                                        </asp:GridView>
+                                        <%--<table id="example2" class="table table-bordered table-hover">
+=======
+
+
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                             <div id="example1_filter" class="dataTables_filter">
+                                                 <label for="txtsearch">Search:
+                                                     <asp:TextBox ID="txtsearch" type="search" lass="form-control form-control-sm" placeholder="" 
+                                                      aria-controls="example1" runat="server"></asp:TextBox>
+                                                 </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                        <table id="example2" class="table table-bordered table-hover">
+>>>>>>> Stashed changes
                                             <thead>
                                                 <tr>
-                                                    <th>Transaction: </th>
-                                                    <th>Amount</th>
-                                                    <th>Date</th>
-                                                    <th>Time </th>
-                                                    <th>Reference Number</th>
-                                                  </tr>
+                                                    <th>Senior Citizen ID No.</th>
+                                                    <th>Name</th>
+                                                    <th>Birthdate</th>
+                                                    <th>Age</th>
+                                                    <th>Gender</th>
+                                                    <th>Address</th>
+                                                    <th>Marital Status</th>
+                                                    <th>Occupation</th>
+                                                    <th>Action</th>
+                                                </tr>
                                             </thead>
-                                            <tbody>
-                                        
-                                    
-                                           
-                                       
-                                                <tr class="gradeA">
-                                                    <td>Buy E-money</td>
-                                                    <td>3,000</td>
-                                                    <td>2021-01-23</td>
-                                                    <td>11:12</td>
-                                                    <td>000595018</td>
-                                                    
-                                                </tr>
-                                                
-                                                <tr class="gradeA">
-                                                    <td>Pay in Pos</td>
-                                                    <td>800</td>
-                                                    <td>2021-01-25</td>
-                                                    <td>11:12</td>
-                                                    <td>000595344</td>
-                                                    
-                                                </tr>
-                                              
-                                                <tr class="gradeA">
-                                                    <td>Buy E-money</td>
-                                                    <td>300</td>
-                                                    <td>2021-01-26</td>
-                                                    <td>11:12</td>
-                                                    <td>000595018</td>
-                                                    
-                                                </tr>
-                                              
-                                                <tr class="gradeA">
-                                                    <td>Pay in Pos</td>
-                                                    <td>2,500</td>
-                                                    <td>2021-01-26</td>
-                                                    <td>11:12</td>
-                                                    <td>000595018</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr class="gradeA">
-                                                    <td>Buy E-money</td>
-                                                    <td>3,000</td>
-                                                    <td>2021-02-2</td>
-                                                    <td>11:12</td>
-                                                    <td>000595018</td>
-                                                    
-                                                </tr>
-                                               
-                                                <tr class="gradeA">
-                                                    <td>Pay to Pos</td>
-                                                    <td>300</td>
-                                                    <td>2021-02-5</td>
-                                                    <td>11:12</td>
-                                                    <td>000595018</td>
-                                                    
-                                                </tr>
-                                             
-                                               
-                                            </tbody>
-                                        </table>
+<<<<<<< Updated upstream
+                                        </table>--%>
+
                                     </div>
-                                            
-                                          
-
-                                          </div>
-
-                                        
-
-                                        </div>
-                                    
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!--End of Register Form-->
-
+           
         </div>
       
         <!-- /#page-wrapper -->

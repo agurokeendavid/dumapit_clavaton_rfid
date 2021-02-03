@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CreateStudent.aspx.cs" Inherits="ReloadableRFID.Web.Pages.CreateStudent" Async="true" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CreateCashierUE.aspx.cs" Inherits="ReloadableRFID.Web.Pages.CreateCashierUE" Async="true" %>
 
 <!DOCTYPE html>
 
@@ -9,7 +9,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>Students Account</title>
+    <title>Cashier Account</title>
 
     <link rel="shortcut icon" href="../img/filamer.png" />
 
@@ -69,7 +69,7 @@
                 </ul>
                 <!-- /.navbar-top-links -->
 
-                  <div class="navbar-default sidebar" role="navigation">
+                   <div class="navbar-default sidebar" role="navigation">
                     <div class="sidebar-nav navbar-collapse">
                         <ul class="nav" id="side-menu">
                             <li>
@@ -159,7 +159,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h1 class="page-header">Student's Account</h1>
+                            <h1 class="page-header">Cashier's Account</h1>
                         </div>
                         <!-- /.col-lg-12 -->
                     </div>
@@ -168,16 +168,16 @@
                         <div class="col-lg-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    Create Student's Account
+                                    Create Cashier's Account
                                 </div>
 
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                    <label for="txtStudentNo" class="lead">Student Number</label>
-                                                    <asp:TextBox ID="txtStudentNo" class="form-control"
-                                                        placeholder="Enter Student Number" runat="server"></asp:TextBox>
+                                                    <label for="txtCashierNo" class="lead">Cashier Number</label>
+                                                    <asp:TextBox ID="txtCashierNo" class="form-control"
+                                                        placeholder="Enter Cashier Number" runat="server"></asp:TextBox>
                                                 </div>
 
                                                 <div class="form-group">
@@ -228,89 +228,14 @@
 
                                                 </div>
 
-                                                <div class="form-group">
-                                                    <%--<label  class="lead">Department</label>
-                                                    <select class="form-control">
-                                                        
-                                                        <option></option>
-                                                        <option>College of Computer Studies</option>
-                                                        <option>College of Nursing</option>
-                                                        <option>College of Hotel Management and Tourism</option>
-                                                        <option>College of Education</option>
-                                                        <option>College of Criminology</option>
-                                                        <option>College of Art and Sciences</option>
-                                                        <option>College of Criminology</option>
-                                                        <option>College of Business Administration</option>
-                                                        <option>Senior High School</option>
-                                                        <option>Junior High School</option>
-                                                        <option>Elementary</option>
-                                                        <option>Kinder</option>
-                                                    </select>--%>
-                                                    <label class="lead" for="ddlDepartments">Department</label>
-                                                    <asp:DropDownList runat="server" ID="ddlDepartments" AutoPostBack="True" CssClass="form-control" OnSelectedIndexChanged="ddlDepartments_OnSelectedIndexChanged">
-                                                        <asp:ListItem Text="-- SELECT DEPARTMENT --" Value="0"></asp:ListItem>
-                                                    </asp:DropDownList>
-                                                </div>
-                                                <div class="form-group">
+                                            <div class="form-group">
 
-                                                    <%--<label class="lead">Course/Strand</label>
-                                                    <select class="form-control">
-                                                        <option></option>
-                                                        <option>Bachelor of Science in Information Technology</option>
-                                                        <option>Bachelor of Science in Computer Science</option>
-                                                        <option>Bachelor of Science in Tourism Management</option>
-                                                        <option>Bachelor of Science in Elementary Education
-                                                        (Major In Mathematics)</option>
-                                                        <option>Bachelor of Science in Elementary Education
-                                                        (Major In English)</option>
-                                                        <option>Bachelor of Science in Elementary Education
-                                                        (Major In Science)</option>
-                                                        <option>Science, Technology, Engineering, 
-                                                        and Mathematics (STEM)</option>
-                                                        <option>Technical-Vocational-Livehood(TVL)-ICT</option>
-                                                        <option>Technical-Vocational-Livehood(TVL)-Industrial Arts</option>
-                                                        <option>Technical-Vocational-Livehood(TVL)-Home Ecoomics</option>
-                                                        <option>Technical-Vocational-Livehood(TVL)-Agri-Fishery Arts</option>
-                                                        <option>Accountancy, Business and Management(ABM)</option>
-                                                        <option>Humanities and Social Sciences(HUMSS)</option>
-                                                        <option>General Academics(GA)</option>
-                                                    </select>--%>
-                                                    
-                                                    <label class="lead" for="ddlCourses">Course</label>
-                                                    <asp:DropDownList runat="server" ID="ddlCourses" CssClass="form-control">
-                                                        <asp:ListItem Text="-- SELECT COURSE --" Value="0"></asp:ListItem>
-                                                    </asp:DropDownList>
-                                                </div>
+                                                    <label>Contact Number</label>
+                                                    <asp:TextBox ID="txtContact" class="form-control"
+                                                        placeholder="Enter Number" runat="server"></asp:TextBox>
 
-                                                <div class="form-group row">
-                                                    <div class="col-lg-5">
-                                                        <label for="ddlYearLevels" class="lead">Year Level</label>
-                                                        <asp:DropDownList runat="server" ID="ddlYearLevels" CssClass="form-control">
-                                                            <asp:ListItem Text="-- SELECT YEAR LEVEL --" Value="0"></asp:ListItem>
-                                                        </asp:DropDownList>
-                                                        <%--<select class="form-control">
-                                                            <option></option>
-                                                            <option>Grade 1</option>
-                                                            <option>Grade 2</option>
-                                                            <option>Grade 3</option>
-                                                            <option>Grade 4</option>
-                                                            <option>Grade 5</option>
-                                                            <option>Grade 6</option>
-                                                            <option>Grade 7</option>
-                                                            <option>Grade 8</option>
-                                                            <option>Grade 9</option>
-                                                            <option>Grade 10</option>
-                                                            <option>Grade 11</option>
-                                                            <option>Grade 12</option>
-                                                            <option>1st Year</option>
-                                                            <option>2nd Year</option>
-                                                            <option>3rd Year</option>
-                                                            <option>4th Year</option>
-                                                            <option>5th Year</option>
-                                                        </select>--%>
-                                                    </div>
                                                 </div>
-
+                                              
                                                 <div class="form-group">
                                                     <label for="fuPhoto" class="lead">File input</label>
                                                     <asp:FileUpload ID="fuPhoto" runat="server" />
@@ -348,3 +273,4 @@
 
 </body>
 </html>
+

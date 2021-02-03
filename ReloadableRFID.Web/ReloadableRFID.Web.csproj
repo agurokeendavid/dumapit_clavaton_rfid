@@ -207,11 +207,13 @@
     <Content Include="js\startmin.js" />
     <Content Include="Pages\AdminLogin.aspx" />
     <Content Include="Pages\AdminRegistration.aspx" />
-    <Content Include="Pages\CreateCashier.aspx" />
+    <Content Include="Pages\CreateCashierCen.aspx" />
+    <Content Include="Pages\CreateCashierUE.aspx" />
     <Content Include="Pages\CreateStudent.aspx" />
     <Content Include="Pages\Login.aspx" />
     <Content Include="Pages\Home.aspx" />
     <Content Include="Pages\Logout.aspx" />
+    <Content Include="Pages\products.aspx" />
     <Content Include="Pages\StudentAccount.aspx" />
     <Content Include="Pages\StudentProfile.aspx" />
     <Content Include="Pages\cashier.aspx" />
@@ -221,6 +223,7 @@
     <Content Include="Pages\cashier1.aspx" />
     <Content Include="Pages\manage.aspx" />
     <Content Include="Pages\Home-Student.aspx" />
+    <Content Include="Pages\WebForm10.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -391,12 +394,19 @@
     <Compile Include="Pages\AdminRegistration.aspx.designer.cs">
       <DependentUpon>AdminRegistration.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\CreateCashier.aspx.cs">
-      <DependentUpon>CreateCashier.aspx</DependentUpon>
+    <Compile Include="Pages\CreateCashierCen.aspx.cs">
+      <DependentUpon>CreateCashierCen.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\CreateCashier.aspx.designer.cs">
-      <DependentUpon>CreateCashier.aspx</DependentUpon>
+    <Compile Include="Pages\CreateCashierCen.aspx.designer.cs">
+      <DependentUpon>CreateCashierCen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CreateCashierUE.aspx.cs">
+      <DependentUpon>CreateCashierUE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CreateCashierUE.aspx.designer.cs">
+      <DependentUpon>CreateCashierUE.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\CreateStudent.aspx.cs">
       <DependentUpon>CreateStudent.aspx</DependentUpon>
@@ -425,6 +435,13 @@
     </Compile>
     <Compile Include="Pages\Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\products.aspx.cs">
+      <DependentUpon>products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\products.aspx.designer.cs">
+      <DependentUpon>products.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\StudentAccount.aspx.cs">
       <DependentUpon>StudentAccount.aspx</DependentUpon>
@@ -488,6 +505,13 @@
     </Compile>
     <Compile Include="Pages\Home-Student.aspx.designer.cs">
       <DependentUpon>Home-Student.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WebForm10.aspx.cs">
+      <DependentUpon>WebForm10.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\WebForm10.aspx.designer.cs">
+      <DependentUpon>WebForm10.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

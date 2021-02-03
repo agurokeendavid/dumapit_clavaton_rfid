@@ -13,5 +13,20 @@ namespace ReloadableRFID.Web.Pages
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button1_Click1(object sender, EventArgs e)
+        {
+            Server.Transfer("products.aspx");
+        }
+
+        protected void Add_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("products.aspx");
+        }
     }
 }

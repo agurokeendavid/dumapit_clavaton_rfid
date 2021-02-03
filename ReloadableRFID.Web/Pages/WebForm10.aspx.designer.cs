@@ -10,7 +10,7 @@
 
 namespace ReloadableRFID.Web.Pages
 {
-    public partial class CreateCashier
+    public partial class WebForm10
     {
 
         /// <summary>

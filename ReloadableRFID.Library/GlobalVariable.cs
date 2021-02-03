@@ -10,5 +10,7 @@ namespace ReloadableRFID.Library
     {
         public static int AdministratorAccountTypeId = 1;
         public static int StudentAccountTypeId = 2;
+        public static int Cashier1AccountTypeId = 3;
+        public static int Cashier2AccountTypeId = 4;
     }
 }
