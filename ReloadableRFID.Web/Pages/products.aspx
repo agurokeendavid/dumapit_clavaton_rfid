@@ -1,29 +1,23 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="manage.aspx.cs" Inherits="ReloadableRFID.Web.Pages.WebForm8" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="products.aspx.cs" Inherits="ReloadableRFID.Web.Pages.products" Async ="true"%>
 
-<<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Student</title>
-<link rel="shortcut icon" href="../img/filamer.png" />
+
+    <title>Cashier Account</title>
+
+    <link rel="shortcut icon" href="../img/filamer.png" />
 
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- MetisMenu CSS -->
     <link href="../css/metisMenu.min.css" rel="stylesheet" />
-    
-    <!-- Social Buttons CSS -->
-        <link href="../css/bootstrap-social.css" rel="stylesheet">
-     <!-- DataTables CSS -->
-        <link href="../css/dataTables/dataTables.bootstrap.css" rel="stylesheet">
-
-        <!-- DataTables Responsive CSS -->
-        <link href="../css/dataTables/dataTables.responsive.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="../css/startmin.css" rel="stylesheet" />
@@ -40,7 +34,7 @@
 
 </head>
 <body>
-  <form id="form1" runat="server">
+    <form id="form1" runat="server">
 
         <div id="wrapper">
 
@@ -74,7 +68,8 @@
                     </li>
                 </ul>
                 <!-- /.navbar-top-links -->
-                     <div class="navbar-default sidebar" role="navigation">
+
+                   <<div class="navbar-default sidebar" role="navigation">
                     <div class="sidebar-nav navbar-collapse">
                         <ul class="nav" id="side-menu">
                             <li>
@@ -82,7 +77,7 @@
                             </li>
                             <% if (Session["AccountTypeId"].ToString() == "2") { %>
                             <li>
-                                <a href="#" class="active"><i class="fa fa-dashboard fa-fw"></i> Balance of e-Money</a>
+                                <a href="Student.aspx" class="active"><i class="fa fa-dashboard fa-fw"></i> Balance of e-Money</a>
                             </li>
                             <li>
                                 <a href="#" class="active"><i class="fa fa-dashboard fa-fw"></i> Transaction History</a>
@@ -158,8 +153,9 @@
                 </div>
             </nav>
 
+
             <!--Start of Student Register Form-->
-               <div id="page-wrapper">
+            <div id="page-wrapper">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
@@ -172,66 +168,64 @@
                         <div class="col-lg-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    
+                                   Add Products
                                 </div>
 
                                 <div class="panel-body">
                                     <div class="row">
-                                        <div class="col-lg-12">
-                                          
-                                        <div class="table-responsive">
-                                        <table class="table table-striped table-bordered table-hover" id="dataTables-example">
-                                            <thead>
-                                                <tr>
-                                                    <th>Item Name</th>
-                                                    <th>Item #</th>
-                                                    <th>Stock</th>
-                                                    <th>Price</th>
-                                                    
-                                                  </tr>
-                                            </thead>
-                                            <tbody>
- 
-                                       
-                                                <tr class="gradeA">
-                                                    <td>I.D</td>
-                                                    <td>00001</td>
-                                                    <td>38</td>
-                                                    <td>120</td>
-                                                </tr>
-                                                <tr class="gradeA">
-                                                    <td>Book</td>
-                                                    <td>00002</td>
-                                                    <td>55</td>
-                                                    <td>2,000</td>
-                                                </tr>
-                                                  <tr class="gradeA">
-                                                    <td>Uniform</td>
-                                                    <td>00003</td>
-                                                    <td>38</td>
-                                                    <td>280</td>
-                                                </tr>
-                                                  <tr class="gradeA">
-                                                    <td>Lanyard</td>
-                                                    <td>00004</td>
-                                                    <td>23</td>
-                                                    <td>100</td>
-                                                </tr>
-                                             
-                                               
-                                            </tbody>
-                                        </table>
-                                            <asp:Button ID="Add" class="btn btn-primary" runat="server" onclick="Add_Click"  Text="ADD"  /> 
-                                    </div>
-                                            
-                                          
-
-                                          </div>
-
-                                        
-
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                    <label for="txtItem" class="lead">Item</label>
+                                                    <asp:TextBox ID="txtItem" class="form-control"
+                                                        placeholder="Enter Item" runat="server"></asp:TextBox>
+                                                </div>
+                                             <div class="form-group">
+                                                    <label for="txtItemName" class="lead">Item Name</label>
+                                                    <asp:TextBox ID="txtItemName" class="form-control"
+                                                        placeholder="Enter Item Name" runat="server"></asp:TextBox>
+                                                </div>
+                                             <div class="form-group">
+                                                    <label for="txtItemNo" class="lead">Item Number</label>
+                                                    <asp:TextBox ID="txtItemNo" class="form-control"
+                                                        placeholder="Enter Item Number" runat="server"></asp:TextBox>
+                                                </div>
                                         </div>
-                                    
+
+                                         
+
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+
+                                                    <label>Stock</label>
+                                                    <asp:TextBox ID="txtStock" class="form-control"
+                                                        placeholder="Enter Stock" runat="server"></asp:TextBox>
+
+                                                </div>
+
+                                            <div class="form-group">
+
+                                                    <label>Price</label>
+                                                    <asp:TextBox ID="txtPrice" class="form-control"
+                                                        placeholder="Enter Price" runat="server"></asp:TextBox>
+
+                                                </div>
+
+                                            <div class="form-group" style="margin-top: 150px;">
+
+                                                <div class="col-12">
+                                                           <asp:Button ID="btnBack" class="btn btn-primary" Style="float: right;" runat="server" OnClick="btnBack_Click" Text ="Back" />
+                                                        </div>
+                                                <div   class="form-group">
+                                                         <asp:Button ID="add" class="btn btn-success" Style="float: right;" runat="server" OnClick="add_Click" Text ="Add" />
+                                                        </div>
+                                                
+                                                       
+                                                    </div>
+                                                        
+
+                                            
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -241,7 +235,6 @@
             <!--End of Register Form-->
 
         </div>
-      
         <!-- /#page-wrapper -->
     </form>
 
@@ -253,22 +246,9 @@
 
     <!-- Metis Menu Plugin JavaScript -->
     <script src="../js/metisMenu.min.js"></script>
-    
-        <!-- DataTables JavaScript -->
-        <script src="../js/dataTables/jquery.dataTables.min.js"></script>
-        <script src="../js/dataTables/dataTables.bootstrap.min.js"></script>
-
 
     <!-- Custom Theme JavaScript -->
     <script src="../js/startmin.js"></script>
-    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
-        <script>
-            $(document).ready(function() {
-                $('#dataTables-example').DataTable({
-                        responsive: true
-                });
-            });
-        </script>
 
 </body>
 </html>

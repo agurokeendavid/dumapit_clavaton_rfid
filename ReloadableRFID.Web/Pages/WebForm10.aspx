@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CreateCashier.aspx.cs" Inherits="ReloadableRFID.Web.Pages.CreateCashier" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm10.aspx.cs" Inherits="ReloadableRFID.Web.Pages.WebForm10" %>
 
 <!DOCTYPE html>
 
@@ -9,6 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            sadsadsasd as
         </div>
     </form>
 </body>
